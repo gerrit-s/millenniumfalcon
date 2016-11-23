@@ -12,7 +12,9 @@
 
 //Main competition background code...do not modify!
 #include "Vex_Competition_Includes.c"
+#include "robotconfig.c"
 #include "autonomous_includes.c"
+#include "usercontrol_includes.c"
 
 /*---------------------------------------------------------------------------*/
 /*                          Pre-Autonomous Functions                         */
@@ -52,10 +54,6 @@ void pre_auton()
 
 task autonomous()
 {
-  // ..........................................................................
-  // Insert user code here.
-  // ..........................................................................
-
   autonomous_program();
 }
 
@@ -71,20 +69,5 @@ task autonomous()
 
 task usercontrol()
 {
-  // User control code here, inside the loop
-
-  while (true)
-  {
-    // This is the main execution loop for the user control program.
-    // Each time through the loop your program should update motor + servo
-    // values based on feedback from the joysticks.
-
-    // ........................................................................
-    // Insert user code here. This is where you use the joystick values to
-    // update your motors, etc.
-    // ........................................................................
-
-    // Remove this function call once you have "real" code.
-    UserControlCodePlaceholderForTesting();
-  }
+	usercontrol_program();
 }
